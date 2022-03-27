@@ -26,13 +26,12 @@
 								<p id="hitokoto" style="font-size: 30px;">瓜瓜正获取中......</p>
 
 <script>
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      const hitokoto = document.getElementById('hitokoto')
-      hitokoto.innerText = data.hitokoto
-    })
-    .catch(console.error)
+fetch('https://stapi.luyaoguagua.top')
+  .then(response => response.text())
+  .then(data => {
+    const hitokoto = document.getElementById('hitokoto')
+    hitokoto.innerText = data
+  })
 </script>
 
 							</div>
